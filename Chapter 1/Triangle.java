@@ -1,10 +1,12 @@
-public class TableandChairs {
-   public static void main(String args[]) {
-      System.out.println("X                       X");
-      System.out.println("X                       X");
-      System.out.println("X       XXXXXXXXXX      X");
-      System.out.println("XXXXX   X        X  XXXXX");
-      System.out.println("X   X   X        X  X   X");
-      System.out.println("X   X   X        X  X   X");
-   }
+public class Main {
+    public static void main(String[] args) {
+        int n = 5; // number of rows in the triangle
+
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("t ");
+            }
+            System.out.println();
+        }
+    }
 }
