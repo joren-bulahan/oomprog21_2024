@@ -1,10 +1,12 @@
-public class Main {
+public class Triangle {
     public static void main(String[] args) {
-        int n = 5; // number of rows in the triangle
-
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= i; j++) {
-                System.out.print("t ");
+        int rows = 6;
+        for (int i = 1; i <= rows; i++) {
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("T");
             }
             System.out.println();
         }
