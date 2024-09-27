@@ -1,7 +1,7 @@
-public class Circle {
-    private static double radius;
-    private static double diameter;
-    private static double area;
+class Circle {
+    private double radius;
+    private double diameter;
+    private double area;
 
     public Circle() {
         radius = 1;
@@ -9,21 +9,40 @@ public class Circle {
         area = Math.PI * radius * radius;
     }
 
-    public static void setRadius(double rad) {
+    public void setRadius(double rad) {
         radius = rad;
         diameter = 2 * radius;
         area = Math.PI * radius * radius;
     }
 
-    public static double getRadius() {
+    public double getRadius() {
         return radius;
     }
 
-    public static double getDiameter() {
+    public double getDiameter() {
         return diameter;
     }
 
-    public static double getArea() {
+    public double getArea() {
         return area;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+       
+        Circle circle1 = new Circle();
+        System.out.println("Circle 1:");
+        System.out.println("Radius: " + circle1.getRadius());
+        System.out.println("Diameter: " + circle1.getDiameter());
+        System.out.println("Area: " + circle1.getArea());
+
+      
+        Circle circle2 = new Circle();
+        circle2.setRadius(5);
+        System.out.println("\nCircle 2:");
+        System.out.println("Radius: " + circle2.getRadius());
+        System.out.println("Diameter: " + circle2.getDiameter());
+        System.out.println("Area: " + circle2.getArea());
     }
 }
