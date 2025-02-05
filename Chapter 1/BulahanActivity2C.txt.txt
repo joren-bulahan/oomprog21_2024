@@ -1,0 +1,14 @@
+using System;
+
+     class BulahanActivity2C
+{
+    public static void Main(string[] args)
+    {
+     string studentName = "Joren Jay L. Bulahan";
+     string studentNameUpper = studentName.ToUpper();
+     int lengthName = studentName.Length;
+    
+    Console.WriteLine(studentNameUpper);
+    Console.WriteLine(lengthName );
+    }
+}

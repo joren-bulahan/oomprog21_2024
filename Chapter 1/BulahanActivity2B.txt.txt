@@ -1,0 +1,16 @@
+using System;
+
+     class BulahanActivity2B
+{
+    public static void Main(string[] args)
+    {
+      int  BulahanVarA = 20;
+      double BulahanVarB = 15.57;
+     
+    double   BulahanVarC = BulahanVarA;
+    int BulahanVarD = (int) BulahanVarB;
+    
+    Console.WriteLine(BulahanVarC );
+    Console.WriteLine(BulahanVarD);
+    }
+}

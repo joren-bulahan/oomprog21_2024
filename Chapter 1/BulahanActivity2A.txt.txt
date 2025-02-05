@@ -1,0 +1,20 @@
+using System;
+
+     class BulahanActivity2A
+{
+    public static void Main(string[] args)
+    {
+      int  BulahanVarA = 20;
+      double BulahanVarB = 15.57;
+      
+    double  addition = BulahanVarA + BulahanVarB;
+    double  subtraction = BulahanVarA - BulahanVarB;
+    double  multiplication = BulahanVarA * BulahanVarB; 
+    double  division = BulahanVarA / BulahanVarB;
+    
+    Console.WriteLine(addition);
+    Console.WriteLine(subtraction);
+    Console.WriteLine(multiplication);
+    Console.WriteLine(division);
+}
+}
