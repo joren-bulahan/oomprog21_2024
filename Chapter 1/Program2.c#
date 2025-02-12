@@ -1,0 +1,25 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Replace this with the last two digits of your student ID
+        int studentIdEnding = 23; // Example: if your ID ends in 23
+
+        // Declare and initialize variables
+        int X = studentIdEnding;
+        double Y = X * 1.5;
+        char C = (char)('A' + (X % 26)); // Choose a character based on (X % 26)
+        string S = $"Student{X}'s Test"; // Create the string
+        bool B = (X % 2 == 0); // True if X is even, otherwise false
+
+        // Display the required output
+        Console.WriteLine($"Student ID ending in {X}");
+        Console.WriteLine($"Integer Value: {X}");
+        Console.WriteLine($"Double Value: {Y}");
+        Console.WriteLine($"Character Value: {C}");
+        Console.WriteLine($"String Value: {S}");
+        Console.WriteLine($"Boolean Value: {B}");
+    }
+}
