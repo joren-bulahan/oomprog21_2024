@@ -1,0 +1,21 @@
+ using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        int studentIdEnding = 23; 
+
+        
+        int X = studentIdEnding;
+        int Y = X * 2 + 5;
+        int Z = Y - X;
+
+        
+        Console.WriteLine($"Hello, Student with ID ending in {X}!");
+        Console.Write("Your values are: ");
+        Console.WriteLine($"{X}, {Y}, {Z}");
+        Console.WriteLine("\nComputation completed successfully!");
+    }
+}
