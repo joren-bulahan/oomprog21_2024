@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Lease {
     private String name;
     private int apartmentNumber;
@@ -74,15 +75,15 @@ class TestLease {
         Lease lease1 = new Lease();
         Lease lease2 = getData();
         Lease lease3 = getData();
-        Lease lease 4 = new Lease();
+        Lease lease4 = new Lease();  // Fixed the syntax error here
 
-        showValues(lease1);
-        addPetFee(lease1);
-        showValues(lease1);
+        lease1.showValues();         // Call instance method on lease1
+        lease1.addPetFee();          // Call instance method on lease1
+        lease1.showValues();         // After adding pet fee
 
-        showValues(lease2);
-        showValues(lease3);
-        showValues(lease4);
+        lease2.showValues();
+        lease3.showValues();
+        lease4.showValues();
     }
 
     public static Lease getData() {
