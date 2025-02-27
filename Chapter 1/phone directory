@@ -1,0 +1,89 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+// Class to represent the phone directory
+class PhoneDirectory {
+    private ArrayList<String> names;
+    private ArrayList<String> phoneNumbers;
+    private int maxSize;
+
+    // Constructor to initialize the directory with a maximum size
+    public PhoneDirectory(int maxSize) {
+        this.maxSize = maxSize;
+        this.names = new ArrayList<>();
+        this.phoneNumbers = new ArrayList<>();
+    }
+
+    // Method to add a new entry to the directory
+    public void addEntry(String name, String phoneNumber) {
+        if (names.size() < maxSize) {
+            names.add(name);
+            phoneNumbers.add(phoneNumber);
+            System.out.println("Added " + name + " with phone number " + phoneNumber + ".");
+        } else {
+            System.out.println("Directory is full. Cannot add more entries.");
+        }
+    }
+
+    // Method to find a phone number by name
+    public String findPhoneNumber(String name) {
+        for (int i = 0; i < names.size(); i++) {
+            if (names.get(i).equalsIgnoreCase(name)) {
+                return phoneNumbers.get(i);
+            }
+        }
+        return null; // Return null if the name is not found
+    }
+
+    // Method to check if the directory is full
+    public boolean isFull() {
+        return names.size() >= maxSize;
+    }
+}
+
+// Main driver class
+public class MainProgram {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        PhoneDirectory directory = new PhoneDirectory(30);
+
+        // Add the first 10 entries
+        directory.addEntry("Alice", "123-456-7890");
+        directory.addEntry("Bob", "234-567-8901");
+        directory.addEntry("Charlie", "345-678-9012");
+        directory.addEntry("David", "456-789-0123");
+        directory.addEntry("Eve", "567-890-1234");
+        directory.addEntry("Frank", "678-901-2345");
+        directory.addEntry("Grace", "789-012-3456");
+        directory.addEntry("Hank", "890-123-4567");
+        directory.addEntry("Ivy", "901-234-5678");
+        directory.addEntry("Jack", "012-345-6789");
+
+        // Prompt the user for names
+        while (true) {
+            System.out.print("Enter a name to search (or 'quit' to exit): ");
+            String name = scanner.nextLine();
+
+            if (name.equalsIgnoreCase("quit")) {
+                System.out.println("Exiting the program.");
+                break;
+            }
+
+            String phoneNumber = directory.findPhoneNumber(name);
+            if (phoneNumber != null) {
+                System.out.println("Phone number for " + name + " is " + phoneNumber + ".");
+            } else {
+                if (directory.isFull()) {
+                    System.out.println("Directory is full. Cannot add more entries.");
+                    break;
+                } else {
+                    System.out.print("Name not found. Enter phone number for " + name + ": ");
+                    String newPhoneNumber = scanner.nextLine();
+                    directory.addEntry(name, newPhoneNumber);
+                }
+            }
+        }
+
+        scanner.close();
+    }
+}
